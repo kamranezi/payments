@@ -1,0 +1,38 @@
+{
+    "scripts": {
+        "serve": "npm run lint && tsc-watch -p tsconfig.json --onSuccess 'node build/index.js'",
+        "build": "rm -rf build/* && npm run lint && tsc -p ./",
+        "lint": "npx tslint --project tsconfig.json --config tslint.json",
+        "test:unit": "mocha -r ts-node/register tests/**/*.spec.ts",
+        "helper": "node dev-helpers/commands.js"
+    },
+    "devDependencies": {
+        "@types/chai": "^4.3.11",
+        "@types/mocha": "^10.0.6",
+        "@types/node": "^20.11.9",
+        "@types/uuid": "^9.0.8",
+        "@typescript-eslint/eslint-plugin": "^6.19.1",
+        "@typescript-eslint/parser": "^6.19.1",
+        "axios-mock-adapter": "^1.22.0",
+        "chai": "^5.0.3",
+        "eslint": "^8.56.0",
+        "eslint-config-standard-with-typescript": "^43.0.1",
+        "eslint-plugin-import": "^2.29.1",
+        "eslint-plugin-n": "^16.6.2",
+        "eslint-plugin-promise": "^6.1.1",
+        "eslint-plugin-vue": "^9.20.1",
+        "fs-extra": "^11.2.0",
+        "mocha": "^10.2.0",
+        "ts-node": "^10.9.2",
+        "tsc-watch": "^6.0.4",
+        "typescript": "^5.3.3"
+    },
+    "dependencies": {
+        "@a2seven/yoo-checkout": "^1.1.4",
+        "axios": "^1.6.7",
+        "cors": "^2.8.5",
+        "express": "^4.18.2",
+        "socket.io": "^4.7.4",
+        "uuid": "^9.0.1"
+    }
+}
